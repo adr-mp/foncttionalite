@@ -1,0 +1,114 @@
+body{
+ background-image: url(bn.jpeg);
+    
+}
+.navbar-nav .nav-item {
+            margin-right: 20px; 
+        }
+        
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0; 
+        }
+        .custom-spinner {
+            color: #93b012; /* Couleur personnalisée, ici un orange vif */
+            position: relative;
+          }    
+          #logo{
+            width: 5%
+        }
+        .navbar-gradient {
+            background: linear-gradient(to right, #8aa214,  #071d9b); 
+        }   
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        /* Animations sophistiquées */
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); }
+        }
+
+        @keyframes floatAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+
+
+        .domain-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .domain-card:hover {
+            transform: rotateX(10deg) translateY(-10px);
+            animation: glowPulse 2s infinite;
+        }
+
+        .domain-icon {
+            transition: all 0.4s ease;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        .card-overlay {
+            background: linear-gradient(145deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            backdrop-filter: blur(10px);
+        }
+
+        .detailed-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .detailed-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s;
+        }
+
+        .detailed-button:hover::before {
+            left: 100%;
+        }        
+        
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .bft {
+            background-color: aliceblue; /* Couleur de fond agréable */
+            width: 30%; /* Largeur de l'élément */
+            border: 2px solid aliceblue; /* Bordure fine et élégante */
+            border-radius: 15px; /* Coins arrondis pour un look moderne */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+            margin: 5px auto; /* Centrage horizontal avec marges */
+            padding: 10px; /* Espacement interne */
+            text-align: center; /* Texte centré */
+            font-family: Arial, sans-serif; /* Police moderne et lisible */
+            color: #333; /* Couleur du texte */
+            transition: transform 0.3s, box-shadow 0.3s; /* Animation sur survol */
+        }
+        
+        .bft:hover {
+            transform: scale(1.05); /* Légère augmentation de la taille au survol */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+        }
+        
+        .text-scientific {
+            color: #63c9ee; /* Couleur bleue élégante */
+            margin-top: 4%;
+            position: relative;
+        }
+
+
+        

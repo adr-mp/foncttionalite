@@ -1,0 +1,210 @@
+.navbar-nav .nav-item {
+            margin-right: 20px; 
+        }
+        
+        .navbar-nav .nav-item:last-child {
+            margin-right: 0; 
+        }
+        .custom-spinner {
+            color: #93b012; /* Couleur personnalisée, ici un orange vif */
+            position: relative;
+          }    
+          #logo{
+            width: 5%
+        }
+        .navbar-gradient {
+            background: linear-gradient(to right, #8aa214,  #071d9b); 
+        }        
+
+        body {
+            background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.1;
+            background: 
+                linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%);
+            background-size: 60px 60px;
+            animation: moveBg 15s linear infinite;
+        }
+
+        @keyframes moveBg {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .content, .creator-section, .footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+        }
+
+        .quaternion-logo {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(145deg, #2193b0, #6dd5ed);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            transform: scale(0);
+            animation: scaleIn 0.8s ease-out forwards;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .quaternion-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            padding: 30px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: slideUp 1s ease-out 0.5s forwards;
+            margin-bottom: 40px;
+        }
+
+        .creator-section {
+            padding: 30px;
+            margin: 40px 0;
+            opacity: 0;
+            animation: slideIn 1s ease-out 1s forwards;
+        }
+
+        .creator-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .creator-info h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .institution-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .institution-row:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .university-logo {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .university-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            text-align: right;
+            margin-top: 50px;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.5s forwards;
+            padding: 20px;
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .highlight:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0) rotate(-180deg); }
+            to { transform: scale(1) rotate(0); }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
